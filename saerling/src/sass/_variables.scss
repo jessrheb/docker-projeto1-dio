@@ -1,0 +1,38 @@
+/* COLORS */
+
+$background-color: #17080d;
+$accent-background-color: #2c1014;
+$special-background-color: #2d070e;
+
+$secondary-heading: #c4b585;
+$tertiary-heading: #ece2ac;
+$body-copy: #d6ca96;
+$links: #b3b188;
+$borders: #a39d7f;
+
+$light-mode-gradient: linear-gradient(
+  90deg,
+  #563a2a 18.75%,
+  #d7b05c 63.54%,
+  #d6d5b9 100%
+);
+$dark-mode-gradient: linear-gradient(
+  90deg,
+  #1d040d 0%,
+  #b24904 60.27%,
+  #d99127 100%
+);
+$pink-gradient: linear-gradient(270deg, #ac7250 0%, #c39265 100%);
+
+$diagram-background-color-outer: #200c10;
+$diagram-background-color-between: #2d1115;
+$diagram-background-color-inner: #3e1418;
+
+/* MEASURES */
+
+$tiny-spacing: 0.6rem;
+$small-spacing: 1.2rem;
+$medium-spacing: 2.4rem;
+$standard-spacing: 3.2rem;
+
+/* #e3d7b4 */

@@ -1,0 +1,800 @@
+@charset "UTF-8";
+/* TOP OF PAGE DECLARATIONS */
+@font-face {
+  font-family: "StretchPro";
+  src: url("../fonts/stretchpro-webfont.ttf") format("truetype"), url("../fonts/stretchpro-webfont.woff2") format("woff2"), url("../fonts/stretchpro-webfont.woff") format("woff"), url("../fonts/stretchpro-webfont.eot"), url("../fonts/stretchpro-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/stretchpro-webfont.svg#stretch_proregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* COLORS */
+/* MEASURES */
+/* #e3d7b4 */
+/* LAYOUT A-Z */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #17080d;
+  box-sizing: border-box;
+  display: flex;
+  width: 57.47rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem auto;
+}
+body ::selection {
+  background-color: #b3b188;
+  color: #17080d;
+}
+
+header,
+main {
+  align-items: center;
+  align-self: stretch;
+  border-left: thin solid #a39d7f;
+  border-right: thin solid #a39d7f;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-top: thin solid #a39d7f;
+  padding: 2.4rem 2.4rem 0;
+}
+header .cover {
+  margin-bottom: -0.3rem;
+  width: 100%;
+}
+header .cover img {
+  width: 52.48rem;
+}
+header .disclaimer {
+  background-color: #2c1014;
+  padding: 2.4rem;
+  width: 100%;
+}
+header .disclaimer p {
+  margin-bottom: 0rem;
+}
+header .disclaimer .inner-icon {
+  align-items: center;
+  border: thin solid #a39d7f;
+  display: flex;
+  float: left;
+  justify-content: center;
+  margin: 0rem 1.6rem 0.8rem 0rem;
+  padding: 0.6rem;
+}
+header .disclaimer .inner-icon .kodachrome-background {
+  background-color: #2d070e;
+  display: flex;
+  padding: 0.6rem;
+  justify-content: center;
+  align-items: center;
+}
+header .disclaimer .inner-icon .kodachrome-background img {
+  width: 8rem;
+}
+
+main {
+  border-bottom: thin solid #a39d7f;
+  padding: 0 2.4rem 2.4rem;
+}
+main .section-content {
+  display: none;
+}
+main .index, main .guidelines, main .profiles, main .active-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  width: 100%;
+}
+main .active-content {
+  padding: 3.2rem 0 0;
+}
+main .author-basics-container .author-basics {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  padding: 0rem 2.4rem;
+}
+main .author-basics-container .author-basics-group {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .guidelines-container {
+  border: thin solid #a39d7f;
+  display: flex;
+  padding: 2.4rem;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-self: stretch;
+}
+main .guidelines-container .guidelines-text {
+  columns: 2;
+  gap: 3.2rem;
+  text-indent: 1.2rem;
+  /*       p > span {
+    color: $tertiary-heading;
+    font-family: 'AnonymousPro';
+    font-size: 3.2rem;
+    font-weight: bold;
+    float: left;
+    margin: 0.4rem 0.8rem 0 0;
+    pointer-events: none;
+    user-select: none;
+  } */
+}
+main .guidelines-container .guidelines-text .aside {
+  background-color: #2c1014;
+  margin: -1.6rem auto 2rem;
+  padding: 0.6rem 1.5rem 0.8rem;
+  text-indent: 0rem;
+}
+main .guidelines-container .guidelines-text .aside::before {
+  content: "ℹ";
+  background-color: #17080d;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  color: #ffe28c;
+  font-size: 110%;
+  float: left;
+  margin: 0.3rem 0.6rem 0 0;
+  padding: 0.2em 0.5em;
+  z-index: -1;
+}
+main .diagram-container {
+  border: thin solid #a39d7f;
+  display: flex;
+  padding: 2.4rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  align-self: stretch;
+  height: 58rem;
+}
+main .diagram-container-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  margin-top: -6rem;
+}
+
+.venn-diagram {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  margin: 10rem auto;
+  top: 12rem;
+  transform: rotate(180deg);
+}
+
+.venn-diagram::after {
+  content: "";
+  width: 48rem;
+  height: 44rem;
+  background-color: #b88348;
+  position: absolute;
+  z-index: -1;
+  left: -16rem;
+  clip-path: polygon(14.58% 12.05%, 53.75% 8.95%, 67.87% 8.41%, 81.67% 28.37%, 88.75% 52%, 79.58% 61.63%, 84.79% 62.31%, 47.71% 97.49%, 16.88% 78%, 16.67% 63.63%, 11.05% 53.87%, 15.79% 34.04%);
+}
+
+#a,
+#ab,
+#b,
+#abc,
+#bc,
+#ac,
+#c {
+  width: 16rem;
+  height: 16rem;
+  position: absolute;
+  transition: all 0.6s ease;
+}
+
+#a {
+  background-color: #66401c;
+}
+
+#b {
+  background-color: #58240f;
+}
+
+#c {
+  background-color: #694a3a;
+}
+
+#abc {
+  background-color: #b88348;
+}
+
+#ab {
+  background-color: #91561e;
+}
+
+#ac {
+  background-color: #9c7346;
+}
+
+#bc {
+  background-color: #935f3c;
+}
+
+#a a,
+#b a,
+#c a,
+#ab a,
+#bc a,
+#ac a {
+  color: #d6ca96;
+}
+#a a:hover,
+#b a:hover,
+#c a:hover,
+#ab a:hover,
+#bc a:hover,
+#ac a:hover {
+  color: #b3b188;
+}
+
+#abc a {
+  color: #17080d;
+}
+#abc a:hover {
+  color: #3a1e1e;
+}
+
+.light-up {
+  filter: brightness(120%);
+}
+
+#a {
+  clip-path: polygon(75% 12.5%, 50% 0, 0 25%, 0 75%, 25% 87.5%, 25% 62.5%, 50% 50%, 50% 25%);
+  top: 0rem;
+  left: -16rem;
+  width: 32rem;
+  height: 32rem;
+}
+
+#ab {
+  clip-path: polygon(50% 25%, 100% 50%, 100% 100%, 50% 75%, 0 100%, 0 50%);
+}
+
+#b {
+  clip-path: polygon(25% 12.5%, 50% 0, 100% 25%, 100% 75%, 75% 87.5%, 75% 62.5%, 50% 50%, 50% 25%);
+  top: 0rem;
+  left: 0rem;
+  width: 32rem;
+  height: 32rem;
+}
+
+#abc {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  top: 12rem;
+}
+
+#bc {
+  clip-path: polygon(100% 25%, 100% 75%, 50% 100%, 0 75%, 50% 50%, 50% 0);
+  top: 16rem;
+  left: 8rem;
+}
+
+#ac {
+  clip-path: polygon(0 25%, 0 75%, 50% 100%, 100% 75%, 50% 50%, 50% 0);
+  top: 16rem;
+  left: -8rem;
+}
+
+#c {
+  clip-path: polygon(0 50%, 0 75%, 50% 100%, 100% 75%, 100% 50%, 75% 62.5%, 50% 50%, 25% 62.5%);
+  top: 12rem;
+  left: -8rem;
+  width: 32rem;
+  height: 32rem;
+}
+
+#a .textbox,
+#ab .textbox,
+#b .textbox,
+#abc .textbox,
+#bc .textbox,
+#ac .textbox,
+#c .textbox {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#a .textbox {
+  clip-path: polygon(75% 12.5%, 50% 0, 0 25%, 0 75%, 25% 87.5%, 25% 62.5%, 50% 50%, 50% 25%);
+}
+
+#ab .textbox {
+  clip-path: polygon(50% 25%, 100% 50%, 100% 100%, 50% 75%, 0 100%, 0 50%);
+}
+
+#b .textbox {
+  clip-path: polygon(25% 12.5%, 50% 0, 100% 25%, 100% 75%, 75% 87.5%, 75% 62.5%, 50% 50%, 50% 25%);
+}
+
+#abc .textbox {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+#bc .textbox {
+  clip-path: polygon(100% 25%, 100% 75%, 50% 100%, 0 75%, 50% 50%, 50% 0);
+}
+
+#ac .textbox {
+  clip-path: polygon(0 25%, 0 75%, 50% 100%, 100% 75%, 50% 50%, 50% 0);
+}
+
+#c .textbox {
+  clip-path: polygon(0 50%, 0 75%, 50% 100%, 100% 75%, 100% 50%, 75% 62.5%, 50% 50%, 25% 62.5%);
+}
+
+.textbox .content {
+  font-weight: 500;
+  height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.textbox .content li {
+  display: inline-block;
+  font-size: 0.64em;
+  list-style-type: none;
+  padding: 0.2rem;
+  vertical-align: middle;
+  transform: rotate(180deg);
+  line-height: 130%;
+}
+
+#a .textbox .content li,
+#b .textbox .content li,
+#c .textbox .content li {
+  font-size: 0.8em;
+  padding: 0.32rem;
+}
+
+#abc .textbox .content li {
+  font-size: 0.78em;
+  padding: 0.28rem;
+}
+
+#a .textbox .content li,
+#ac .textbox .content li {
+  text-align: right;
+}
+
+#b .textbox .content li,
+#bc .textbox .content li {
+  text-align: left;
+}
+
+#ac .textbox .content li,
+#ab .textbox .content li {
+  padding: 0.08rem;
+}
+
+#c .textbox .content li {
+  vertical-align: top;
+}
+
+#ab .textbox .content li {
+  vertical-align: bottom;
+}
+
+#ab .textbox .content ul,
+#ac .textbox .content ul {
+  margin-top: 0.8rem;
+}
+
+.textbox::before,
+.textbox .content::before {
+  content: "";
+  height: 100%;
+  width: 50%;
+}
+
+#a .textbox::before {
+  shape-outside: polygon(100% 0%, 100% 7.5%, 0% 25%, 0% 75%, 72% 87.5%, 72% 80.5%, 100% 80.5%, 100% 100%, 0% 100%, 0% 0%);
+  float: left;
+  clip-path: polygon(100% 0%, 100% 7.5%, 0% 25%, 0% 75%, 72% 87.5%, 72% 80.5%, 100% 80.5%, 100% 100%, 0% 100%, 0% 0%);
+  shape-margin: 2%;
+  width: 35%;
+}
+
+#a .textbox .content::before {
+  shape-outside: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 57.5%, 23.5% 50%, 23.5% 25%, 61.5% 12.5%, 23.5% 0%, 0% 7.5%);
+  float: right;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 57.5%, 23.5% 50%, 23.5% 25%, 61.5% 12.5%, 23.5% 0%, 0% 7.5%);
+  shape-margin: 2%;
+  width: 65%;
+}
+
+#ab .textbox::before {
+  shape-outside: polygon(0% 0%, 100% 0%, 100% 25%, 0% 50%, 0% 100%, 100% 75%, 100% 100%, 0% 100%);
+  float: left;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 0% 50%, 0% 100%, 100% 75%, 100% 100%, 0% 100%);
+  shape-margin: 1%;
+}
+
+#ab .textbox .content::before {
+  shape-outside: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 75%, 0% 100%, 100% 100%, 100% 50%, 0% 25%);
+  float: right;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 100% 100%, 0% 75%, 0% 100%, 100% 100%, 100% 50%, 0% 25%);
+  shape-margin: 1%;
+}
+
+#b .textbox::before {
+  shape-outside: polygon(77.5% 0%, 100% 7.5%, 100% 0%, 77.5% 0%, 38% 12.5%, 77% 25%, 77% 50%, 100% 57.5%, 100% 100%, 0% 100%, 0% 0%);
+  float: left;
+  clip-path: polygon(77.5% 0%, 100% 7.5%, 100% 0%, 77.5% 0%, 38% 12.5%, 77% 25%, 77% 50%, 100% 57.5%, 100% 100%, 0% 100%, 0% 0%);
+  shape-margin: 0%;
+  width: 65%;
+}
+
+#b .textbox .content::before {
+  shape-outside: polygon(0% 0%, 0% 7.5%, 99% 25%, 99% 75%, 28.5% 87.5%, 28.5% 80.5%, 0% 80.5%, 0% 100%, 100% 100%, 100% 0%);
+  float: right;
+  clip-path: polygon(0% 0%, 0% 7.5%, 99% 25%, 99% 75%, 28.5% 87.5%, 28.5% 80.5%, 0% 80.5%, 0% 100%, 100% 100%, 100% 0%);
+  shape-margin: 0%;
+  width: 35%;
+}
+
+#abc .textbox::before {
+  shape-outside: polygon(0% 0%, 100% 0%, 0% 25%, 0% 75%, 100% 100%, 0% 100%);
+  float: left;
+  clip-path: polygon(0% 0%, 100% 0%, 0% 25%, 0% 75%, 100% 100%, 0% 100%);
+  shape-margin: 2%;
+}
+
+#abc .textbox .content::before {
+  shape-outside: polygon(100% 0%, 0% 0%, 100% 25%, 100% 75%, 0% 100%, 100% 100%);
+  float: right;
+  clip-path: polygon(100% 0%, 0% 0%, 100% 25%, 100% 75%, 0% 100%, 100% 100%);
+  shape-margin: 2%;
+}
+
+#bc .textbox::before {
+  shape-outside: polygon(100% 0%, 100% 50%, 0% 75%, 100% 100%, 0% 100%, 0% 0%);
+  float: left;
+  clip-path: polygon(100% 0%, 100% 50%, 0% 75%, 100% 100%, 0% 100%, 0% 0%);
+  shape-margin: 9%;
+}
+
+#bc .textbox .content::before {
+  shape-outside: polygon(100% 0%, 100% 25%, 100% 100%, 0% 100%, 100% 75%, 100% 25%, 0% 0%);
+  float: right;
+  clip-path: polygon(100% 0%, 100% 25%, 100% 100%, 0% 100%, 100% 75%, 100% 25%, 0% 0%);
+  shape-margin: 9%;
+}
+
+#ac .textbox::before {
+  shape-outside: polygon(0% 25%, 0% 75%, 100% 100%, 0% 100%, 0% 25%, 100% 0%, 0% 0%);
+  float: left;
+  clip-path: polygon(0% 25%, 0% 75%, 100% 100%, 0% 100%, 0% 25%, 100% 0%, 0% 0%);
+  shape-margin: 0%;
+}
+
+#ac .textbox .content::before {
+  shape-outside: polygon(100% 0%, 100% 100%, 0% 100%, 100% 75%, 0% 50%, 0% 0%);
+  float: right;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 100% 75%, 0% 50%, 0% 0%);
+  shape-margin: 0%;
+}
+
+#c .textbox::before {
+  shape-outside: polygon(100% 0%, 100% 50%, 50% 62.5%, 0% 50%, 0% 75%, 100% 100%, 0% 100%, 0% 0%);
+  float: left;
+  clip-path: polygon(100% 0%, 100% 50%, 50% 62.5%, 0% 50%, 0% 75%, 100% 100%, 0% 100%, 0% 0%);
+  shape-margin: 0%;
+}
+
+#c .textbox .content::before {
+  shape-outside: polygon(100% 0%, 100% 75%, 0% 100%, 100% 100%, 100% 50%, 50% 62.5%, 0% 50%, 0% 0%);
+  float: right;
+  clip-path: polygon(100% 0%, 100% 75%, 0% 100%, 100% 100%, 100% 50%, 50% 62.5%, 0% 50%, 0% 0%);
+  shape-margin: 2%;
+}
+
+nav,
+nav .internal,
+nav .external,
+main .navigation,
+main .links,
+main .tags,
+main .tags-masterlist,
+main .tags-legacy,
+main .tags-legacy-row,
+main .tags-row,
+main .tags-column {
+  display: flex;
+}
+
+main .tags,
+main .tags-legacy,
+main .tags-legacy-row,
+main .tags-row,
+main .tags-column {
+  align-items: flex-start;
+}
+
+nav,
+nav .internal,
+nav .external {
+  align-items: flex-end;
+}
+
+nav,
+main .navigation,
+main .links,
+main .tags-legacy,
+main .tags-legacy-row {
+  align-self: stretch;
+}
+
+main .tags,
+main .links,
+main .tags-masterlist,
+main .tags-column {
+  flex-direction: column;
+}
+
+nav {
+  background-color: transparent;
+  padding: 1.2rem 2.4rem;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  transition: all 0.6s ease;
+}
+nav .internal {
+  gap: 6.4rem;
+}
+nav.scroll-up, nav:focus-within {
+  top: 0;
+}
+nav.scroll-down {
+  top: -100%;
+}
+nav .tab--active {
+  text-align: center;
+}
+nav .tab--active::before {
+  content: "•";
+  color: #a39d7f;
+  font-size: 80%;
+  display: block;
+  padding: 0.2rem;
+  position: relative;
+}
+
+html:not([data-scroll="0"]) nav {
+  background-color: #17080d;
+  border-bottom: thin solid #a39d7f;
+  padding-top: 3.2rem;
+  margin-bottom: -0.1rem;
+  z-index: 1;
+}
+
+menu li {
+  list-style-type: none;
+}
+
+main .navigation {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main .navigation .tags {
+  justify-content: center;
+}
+main .navigation .tags-masterlist {
+  border: thin solid #a39d7f;
+  padding: 2.4rem;
+  align-items: center;
+  gap: 1.2rem;
+}
+main .navigation .tags-legacy {
+  border-right: thin solid #a39d7f;
+  border-bottom: thin solid #a39d7f;
+  border-left: thin solid #a39d7f;
+  padding: 2.4rem;
+  gap: 2.4rem;
+  justify-content: space-between;
+}
+main .navigation .tags-legacy-row {
+  gap: 2.4rem;
+  justify-content: space-between;
+}
+main .navigation .tags-row {
+  gap: 2rem;
+}
+main .navigation .tags-column {
+  gap: 0.3rem;
+}
+main .navigation .links {
+  border-right: thin solid #a39d7f;
+  border-bottom: thin solid #a39d7f;
+  border-top: thin solid #a39d7f;
+  padding: 2.4rem;
+  gap: 1.2rem;
+  flex: 1 0 0;
+}
+main .navigation .links h2 {
+  align-self: center;
+}
+
+body {
+  color: #d6ca96;
+  font-family: "Victor Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+body a {
+  color: #b3b188;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.6s ease-in-out;
+  /*     &:not(nav a, .diagram-container a) {
+    text-decoration: underline 0.05rem dashed #93815f;
+    text-underline-offset: 0.25rem;
+  } */
+}
+body a:active {
+  font-weight: 700;
+}
+body a:hover {
+  color: #c39265;
+}
+body nav a {
+  font-size: 1.1em;
+}
+body nav .tab--active {
+  color: #fff4b7;
+  font-weight: 700;
+  pointer-events: none;
+}
+body a,
+body h3,
+body dt,
+body dd,
+body .disclaimer-text {
+  text-transform: uppercase;
+}
+body .disclaimer-text {
+  text-indent: 1.2rem;
+}
+body dt {
+  color: #ece2ac;
+  padding: 0.1rem;
+}
+body h2 {
+  color: #c4b585;
+  font-family: "StretchPro";
+  font-weight: normal;
+  font-size: 1.3em;
+  text-transform: lowercase;
+}
+body h3 {
+  color: #ece2ac;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+body p {
+  line-height: 145%;
+  margin-bottom: 2rem;
+  word-spacing: 0.6rem;
+}
+body p a {
+  word-spacing: 0.1rem;
+}
+body p b, body p strong, body p em, body p mark, body p u {
+  text-transform: uppercase;
+}
+body p b {
+  color: #fff4b7;
+  font-weight: 700;
+  word-spacing: 0.1rem;
+}
+body p strong {
+  background-image: linear-gradient(270deg, #ac7250 0%, #c39265 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  word-spacing: 0.2rem;
+}
+body p em {
+  color: #fff2a5;
+  font-style: italic;
+  word-spacing: 0.1rem;
+}
+body p u {
+  text-decoration: underline 0.05rem #93815f;
+  text-underline-offset: 0.25rem;
+  word-spacing: 0.1rem;
+}
+body p mark {
+  background-color: #2d070e;
+  color: #ffe28c;
+  padding: 0.15rem 0.8rem;
+  word-spacing: 0.8rem;
+}
+body dt {
+  font-weight: 700;
+}
+body .stretch {
+  /*     background-image: $light-mode-gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; */
+  font-family: "StretchPro";
+  font-size: 1em;
+  /*     font-weight: 700; */
+  display: flex;
+  padding: 0rem 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  text-transform: uppercase;
+}
+body .navigation a {
+  font-size: 1.1em;
+}
+body .notice {
+  font-size: 1.1em;
+  text-align: center;
+}
+body .diagram-container h2 {
+  line-height: 80%;
+  text-align: center;
+}
+body .diagram-container .name, body .diagram-container .surname {
+  text-transform: lowercase;
+  padding: 0rem;
+}
+body .diagram-container .name a:hover, body .diagram-container .surname a:hover {
+  color: transparent;
+}
+body .diagram-container .name {
+  font-size: 1.6rem;
+}
+body .diagram-container .surname {
+  font-size: 1.3rem;
+}
+body .diagram-container-bottom h2:first-child {
+  line-height: 110%;
+}
+body .diagram-container-bottom h2:last-child .surname {
+  line-height: 180%;
+}
+body footer p {
+  font-family: "StretchPro";
+  font-weight: normal;
+  text-transform: lowercase;
+  word-spacing: 0rem;
+}
+
+/*# sourceMappingURL=style.css.map */

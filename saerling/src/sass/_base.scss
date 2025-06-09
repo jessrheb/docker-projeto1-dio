@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-color;
+  box-sizing: border-box;
+  display: flex;
+  width: 57.47rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem auto;
+
+  ::selection {
+    background-color: $links;
+    color: $background-color;
+  }
+}

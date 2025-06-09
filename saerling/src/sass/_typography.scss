@@ -1,0 +1,192 @@
+body {
+  color: $body-copy;
+  font-family: 'Victor Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 300;
+
+  a {
+    color: $links;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.6s ease-in-out;
+
+    &:active {
+      font-weight: 700;
+    }
+
+    /*     &:not(nav a, .diagram-container a) {
+      text-decoration: underline 0.05rem dashed #93815f;
+      text-underline-offset: 0.25rem;
+    } */
+  }
+
+  a:hover {
+    color: #c39265;
+  }
+
+  nav {
+    & a {
+      font-size: 1.1em;
+    }
+
+    .tab--active {
+      color: #fff4b7;
+      font-weight: 700;
+      pointer-events: none;
+    }
+  }
+
+  a,
+  h3,
+  dt,
+  dd,
+  .disclaimer-text {
+    text-transform: uppercase;
+  }
+
+  .disclaimer-text {
+    text-indent: 1.2rem;
+  }
+
+  dt {
+    color: $tertiary-heading;
+    padding: 0.1rem;
+  }
+
+  h2 {
+    color: $secondary-heading;
+    font-family: 'StretchPro';
+    font-weight: normal;
+    font-size: 1.3em;
+    text-transform: lowercase;
+  }
+
+  h3 {
+    color: $tertiary-heading;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  p {
+    line-height: 145%;
+    margin-bottom: 2rem;
+    word-spacing: 0.6rem;
+
+    & a {
+      word-spacing: 0.1rem;
+    }
+
+    & b,
+    & strong,
+    & em,
+    & mark,
+    & u {
+      text-transform: uppercase;
+    }
+
+    & b {
+      color: #fff4b7;
+      font-weight: 700;
+      word-spacing: 0.1rem;
+    }
+
+    & strong {
+      background-image: $pink-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 700;
+      word-spacing: 0.2rem;
+    }
+
+    & em {
+      color: #fff2a5;
+      font-style: italic;
+      word-spacing: 0.1rem;
+    }
+
+    & u {
+      text-decoration: underline 0.05rem #93815f;
+      text-underline-offset: 0.25rem;
+      word-spacing: 0.1rem;
+    }
+
+    & mark {
+      background-color: $special-background-color;
+      color: #ffe28c;
+      padding: 0.15rem 0.8rem;
+      word-spacing: 0.8rem;
+    }
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  .stretch {
+    /*     background-image: $light-mode-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+    font-family: 'StretchPro';
+    font-size: 1em;
+    /*     font-weight: 700; */
+    display: flex;
+    padding: 0rem $medium-spacing;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    text-transform: uppercase;
+  }
+
+  .navigation a {
+    font-size: 1.1em;
+  }
+
+  & .notice {
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  .diagram-container {
+    & h2 {
+      line-height: 80%;
+      text-align: center;
+    }
+
+    & .name,
+    & .surname {
+      text-transform: lowercase;
+      padding: 0rem;
+
+      & a:hover {
+        color: transparent;
+      }
+    }
+
+    & .name {
+      font-size: 1.6rem;
+    }
+
+    & .surname {
+      font-size: 1.3rem;
+    }
+
+    &-bottom h2:first-child {
+      line-height: 110%;
+    }
+
+    &-bottom h2:last-child .surname {
+      line-height: 180%;
+    }
+  }
+
+  & footer p {
+    font-family: 'StretchPro';
+    font-weight: normal;
+    text-transform: lowercase;
+    word-spacing: 0rem;
+  }
+}

@@ -1,0 +1,145 @@
+nav,
+nav .internal,
+nav .external,
+main .navigation,
+main .links,
+main .tags,
+main .tags-masterlist,
+main .tags-legacy,
+main .tags-legacy-row,
+main .tags-row,
+main .tags-column {
+  display: flex;
+}
+
+main .tags,
+main .tags-legacy,
+main .tags-legacy-row,
+main .tags-row,
+main .tags-column {
+  align-items: flex-start;
+}
+
+nav,
+nav .internal,
+nav .external {
+  align-items: flex-end;
+}
+
+nav,
+main .navigation,
+main .links,
+main .tags-legacy,
+main .tags-legacy-row {
+  align-self: stretch;
+}
+
+main .tags,
+main .links,
+main .tags-masterlist,
+main .tags-column {
+  flex-direction: column;
+}
+
+nav {
+  background-color: transparent;
+  padding: $small-spacing $medium-spacing;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;
+  transition: all 0.6s ease;
+
+  & .internal {
+    gap: 6.4rem;
+  }
+
+  &.scroll-up,
+  &:focus-within {
+    top: 0;
+  }
+
+  &.scroll-down {
+    top: -100%;
+  }
+
+  & .tab--active {
+    text-align: center;
+
+    &::before {
+      content: '\2022';
+      color: $borders;
+      font-size: 80%;
+      display: block;
+      padding: 0.2rem;
+      position: relative;
+    }
+  }
+}
+
+html:not([data-scroll='0']) {
+  nav {
+    background-color: $background-color;
+    border-bottom: thin solid $borders;
+    padding-top: $standard-spacing;
+    margin-bottom: -0.1rem;
+    z-index: 1;
+  }
+}
+
+menu li {
+  list-style-type: none;
+}
+
+main {
+  & .navigation {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    & .tags {
+      justify-content: center;
+
+      &-masterlist {
+        border: thin solid $borders;
+        padding: $medium-spacing;
+        align-items: center;
+        gap: $small-spacing;
+      }
+
+      &-legacy {
+        border-right: thin solid $borders;
+        border-bottom: thin solid $borders;
+        border-left: thin solid $borders;
+        padding: $medium-spacing;
+        gap: $medium-spacing;
+        justify-content: space-between;
+
+        &-row {
+          gap: $medium-spacing;
+          justify-content: space-between;
+        }
+      }
+
+      &-row {
+        gap: 2rem;
+      }
+
+      &-column {
+        gap: 0.3rem;
+      }
+    }
+
+    & .links {
+      border-right: thin solid $borders;
+      border-bottom: thin solid $borders;
+      border-top: thin solid $borders;
+      padding: $medium-spacing;
+      gap: $small-spacing;
+      flex: 1 0 0;
+
+      & h2 {
+        align-self: center;
+      }
+    }
+  }
+}

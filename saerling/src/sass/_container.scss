@@ -1,0 +1,168 @@
+header,
+main {
+  align-items: center;
+  align-self: stretch;
+  border-left: thin solid $borders;
+  border-right: thin solid $borders;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-top: thin solid $borders;
+  padding: $medium-spacing $medium-spacing 0;
+
+  & .cover {
+    margin-bottom: -0.3rem;
+    width: 100%;
+
+    & img {
+      width: 52.48rem;
+    }
+  }
+
+  & .disclaimer {
+    background-color: $accent-background-color;
+    padding: $medium-spacing;
+    width: 100%;
+
+    & p {
+      margin-bottom: 0rem;
+    }
+
+    & .inner-icon {
+      align-items: center;
+      border: thin solid $borders;
+      display: flex;
+      float: left;
+      justify-content: center;
+      margin: 0rem 1.6rem 0.8rem 0rem;
+      padding: $tiny-spacing;
+
+      & .kodachrome-background {
+        background-color: $special-background-color;
+        display: flex;
+        padding: $tiny-spacing;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+          width: 8rem;
+        }
+      }
+    }
+  }
+}
+
+main {
+  border-bottom: thin solid $borders;
+  padding: 0 $medium-spacing $medium-spacing;
+
+  & .section-content {
+    display: none;
+  }
+
+  & .index,
+  & .guidelines,
+  & .profiles,
+  & .active-content {
+    display: flex;
+    flex-direction: column;
+    gap: $standard-spacing;
+    width: 100%;
+  }
+
+  & .active-content {
+    padding: 3.2rem 0 0;
+  }
+
+  & .author-basics-container {
+    & .author-basics {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: stretch;
+      padding: 0rem $medium-spacing;
+
+      &-group {
+        display: flex;
+        width: fit-content;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  & .guidelines-container {
+    border: thin solid $borders;
+    display: flex;
+    padding: $medium-spacing;
+    flex-direction: column;
+    gap: $medium-spacing;
+    align-self: stretch;
+
+    & .guidelines-text {
+      columns: 2;
+      gap: $standard-spacing;
+      text-indent: $small-spacing;
+
+      /*       p > span {
+        color: $tertiary-heading;
+        font-family: 'AnonymousPro';
+        font-size: 3.2rem;
+        font-weight: bold;
+        float: left;
+        margin: 0.4rem 0.8rem 0 0;
+        pointer-events: none;
+        user-select: none;
+      } */
+
+      & .aside {
+        background-color: $accent-background-color;
+        margin: -1.6rem auto 2rem;
+        padding: 0.6rem 1.5rem 0.8rem;
+        text-indent: 0rem;
+
+        &::before {
+          content: '\2139';
+          background-color: $background-color;
+          clip-path: polygon(
+            50% 0%,
+            100% 25%,
+            100% 75%,
+            50% 100%,
+            0% 75%,
+            0% 25%
+          );
+          color: #ffe28c;
+          font-size: 110%;
+          float: left;
+          margin: 0.3rem $tiny-spacing 0 0;
+          padding: 0.2em 0.5em;
+
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  & .diagram-container {
+    border: thin solid $borders;
+    display: flex;
+    padding: $medium-spacing;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: $small-spacing;
+    align-self: stretch;
+    height: 58rem;
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: stretch;
+      margin-top: -6rem;
+    }
+  }
+}
